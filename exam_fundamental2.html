@@ -1,5 +1,5 @@
 <!-- ==================== SOAL 3 =========================== -->
-
+<!-- 
 <html>
 <body>
     <form id="form">
@@ -34,24 +34,16 @@
         }
     </script>
 </body>
-</html>
+</html> -->
 
 <!-- ============================ SOAL 4 ====================================== -->
-<!-- 
+
 <html>
-<head>
-<style>
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top:0px;
-}
-</style>
-</head>
+
 <body>
     <center>
         input : <input id="input" type="number">
-        <button id="waktu()"> mulai </button>
+        <button id="waktu()" type="button"> mulai </button>
         <p id="demo"></p>
     </center>
 
@@ -65,9 +57,32 @@ p {
         var jam = Math.floor(distance % 60);
         var menit = Math.floor(distance % jam);
         var detik = Math.floor(distance % menit);
+        var array = [[jam],[menit],[detik]];
+        
+        for (var i=distance; i !=0; i--)
+        {
+            document.getElementById("demo").innerHTML = jam + "h "+ menit + "m " + detik + "s ";
+        }
+        // if(jam !==0 && menit !== 0 && detik !== 0)
+        // {
+        //     while (jam > 0 )
+        //     {
+        //         while(menit > 0)
+        //         {
+        //             while(detik> 0)
+        //             {
+        //                 document.getElementById("demo").innerHTML = detik + "s ";
+        //                 detik--;
+        //             }
 
-        document.getElementById("demo").innerHTML = jam + "h "+ menit + "m " + detik + "s ";
+        //             document.getElementById("demo").innerHTML = menit + "m ";
+        //             menit--;
+        //         }
 
+        //         document.getElementById("demo").innerHTML = jam + "h ";
+        //         jam--;
+        //     }
+        // }
         if (jam == 0 && menit == 0 && detik == 0) 
         {
             clearInterval(x);
@@ -77,4 +92,4 @@ p {
 </script>
 
 </body>
-</html> -->
+</html>
