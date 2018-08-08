@@ -37,9 +37,8 @@
 //==================================
 //soal 2
 
-// var string = "A1%6&Z#7Cc9a";
+// var string = "aA1%6&Z#7Cc9a";
 
-// var x = string.length;
 // var angka = string.replace(/[^0-9]/g, '').split('');
 // var huruf = string.replace(/[^a-z-A-Z]/g, '').split('');
 
