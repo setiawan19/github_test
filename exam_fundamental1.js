@@ -32,8 +32,6 @@
 //     console.log("DRAW")
 // }
 
-// console.log(positif);
-// console.log(negatif);
 
 
 //==================================
