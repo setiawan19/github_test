@@ -1,0 +1,80 @@
+<!-- ==================== SOAL 3 =========================== -->
+
+<html>
+<body>
+    <form id="form">
+        username : <input type="text" id="username"><br>
+        password : <input type="text" id="password"><br>
+    </form>
+
+    <button onclick="tampil()"> login here </button>
+
+    <script>
+        function tampil()
+        {
+            var array = [['setiawan','1234'],['wan1','indonesia1']];
+            
+            var input1 = document.getElementById("username").value;
+            var input2 = document.getElementById("password").value;
+
+            if (input1 == array[0][0] && input2 == array[0][1])
+            {
+                alert('Anda Berhasil Login');
+            }
+
+            else if (input1 == array[1][0] && input2 == array[1][1])
+            {
+                alert('Anda Berhasil Login');
+            }
+
+            else 
+            {
+                alert('Username atau Password Anda Salah');
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- ============================ SOAL 4 ====================================== -->
+<!-- 
+<html>
+<head>
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top:0px;
+}
+</style>
+</head>
+<body>
+    <center>
+        input : <input id="input" type="number">
+        <button id="waktu()"> mulai </button>
+        <p id="demo"></p>
+    </center>
+
+<script>
+
+    setInterval(waktu,1000);
+    function waktu() 
+    {
+        var distance = document.getElementById('input').value;
+        
+        var jam = Math.floor(distance % 60);
+        var menit = Math.floor(distance % jam);
+        var detik = Math.floor(distance % menit);
+
+        document.getElementById("demo").innerHTML = jam + "h "+ menit + "m " + detik + "s ";
+
+        if (jam == 0 && menit == 0 && detik == 0) 
+        {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "SELESAI";
+        }
+    }
+</script>
+
+</body>
+</html> -->
