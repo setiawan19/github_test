@@ -57,32 +57,28 @@
         var jam = Math.floor(distance % 60);
         var menit = Math.floor(distance % jam);
         var detik = Math.floor(distance % menit);
-        var array = [[jam],[menit],[detik]];
         
-        for (var i=distance; i !=0; i--)
+        
+        if(jam !==0 && menit !== 0 && detik !== 0)
         {
-            document.getElementById("demo").innerHTML = jam + "h "+ menit + "m " + detik + "s ";
+            while (jam > 0 )
+            {
+                while(menit > 0)
+                {
+                    while(detik> 0)
+                    {
+                        document.getElementById("demo").innerHTML = detik + "s ";
+                        detik--;
+                    }
+
+                    document.getElementById("demo").innerHTML = menit + "m ";
+                    menit--;
+                }
+
+                document.getElementById("demo").innerHTML = jam + "h ";
+                jam--;
+            }
         }
-        // if(jam !==0 && menit !== 0 && detik !== 0)
-        // {
-        //     while (jam > 0 )
-        //     {
-        //         while(menit > 0)
-        //         {
-        //             while(detik> 0)
-        //             {
-        //                 document.getElementById("demo").innerHTML = detik + "s ";
-        //                 detik--;
-        //             }
-
-        //             document.getElementById("demo").innerHTML = menit + "m ";
-        //             menit--;
-        //         }
-
-        //         document.getElementById("demo").innerHTML = jam + "h ";
-        //         jam--;
-        //     }
-        // }
         if (jam == 0 && menit == 0 && detik == 0) 
         {
             clearInterval(x);
